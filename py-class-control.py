@@ -1,9 +1,7 @@
-from abc import ABC, abstractmethod
-class Person(ABC):
+class Person:
     def __init__(self, name, id):
         self.name=name
         self.id=id
-    @abstractmethod
     def get_info(self):
         return f"Name={self.name}, ID={self.id}"
 
