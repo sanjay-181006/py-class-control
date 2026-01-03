@@ -19,7 +19,7 @@ class Student(Person):
             self.__courses.remove(course)
     def __add__(self, other):
         combined=Student(self.name, self.id)
-        combined.__courses=list(set(self.courses+other.__courses))
+        combined.__courses=list(set(self.__courses+other.__courses))
         return combined
     def get_info(self):
         return f"Name={self.name}, ID={self.id}, course={self.__courses}"
@@ -34,5 +34,3 @@ class School:
             if student.id==id:
                 return student
         return None
-    
-    
